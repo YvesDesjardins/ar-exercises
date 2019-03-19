@@ -10,3 +10,8 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+@userStore = gets.chomp
+@newStore = Store.create(name: @userStore)
+@newStore.valid?
+puts '***************************************'
+puts "Error: #{@newStore.errors.messages}"
